@@ -103,19 +103,17 @@ const footers = [
 
 function PricingContent() {
   return (
-    
     <React.Fragment>
       <GlobalStyles styles={{ ul: { margin: 0, padding: 0, listStyle: 'none' } }} />
       <CssBaseline />
       <AppBar
-        id = 'nav'
         position="static"
         color="default"
         elevation={0}
         sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}` }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Typography id = 'companyName' variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
             Developer Solutions
           </Typography>
           <nav>
@@ -138,7 +136,7 @@ function PricingContent() {
             <Link
               variant="button"
               color="text.primary"
-              href="../components/about/about.jsx"
+              href="#"
               sx={{ my: 1, mx: 1.5 }}
             >
               Services
@@ -153,7 +151,9 @@ function PricingContent() {
             </Link>
         
           </nav>
-        
+          <Button href="#" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+            Login
+          </Button>
         </Toolbar>
       </AppBar>
       <ThemeProvider theme={theme}>
@@ -162,12 +162,12 @@ function PricingContent() {
       <main>
         {/* Hero unit */}
         
-        <Container  sx={{ py: 8 }} maxWidth="md">
+        <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
-          <Grid  container spacing={4}>
+          <Grid container spacing={4}>
             {cards.map((card) => (
               <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card 
+                <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
                   <CardMedia
@@ -179,8 +179,8 @@ function PricingContent() {
                     image="https://source.unsplash.com/random"
                     alt="random"
                   />
-                  <CardContent  className = 'card' sx={{ flexGrow: 1 }}>
-                    <Typography className = 'card' gutterBottom variant="h5" component="h2">
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography gutterBottom variant="h5" component="h2">
                       Heading
                     </Typography>
                     <Typography>

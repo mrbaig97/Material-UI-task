@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
+import Pricing from './App';
+import PricingContent from './App';
+import Album from './App'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PricingContent/>
   </React.StrictMode>,
   document.getElementById('root')
 );
